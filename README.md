@@ -4,6 +4,7 @@
 1. Tener instalado el Glassfish 5.1.0, que se puede bajar de [Página de Glassfish](https://projects.eclipse.org/projects/ee4j.glassfish/downloads) (la versión Full Profile)
 2. Tener instalada la versión 8 de Java (Glassfish solo funciona para esa versión), que se puede bajar de [Página de Java 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 3. Configurar IntellijIDEA para usar Glassfish
+4. Para probar sus servicios se sugiere usar algun cliente REST como por ejemplo Postman, que se puede bajar la [Pagina de Postman](https://www.postman.com/downloads/) 
 4. Para realizar las pruebas desde Github será necesario tener ngrok, el cual se puede bajar de [Página de ngrok](https://dashboard.ngrok.com/get-started/setup), además de haberlo configurado de acuerdo a lo que se verá en la sesión del 26 de octubre.
 
 ## COPIA DEL REPOSITORIO REMOTO EN SU COMPUTADORA LOCAL
@@ -33,6 +34,14 @@ Antes de hacer los cambios en el código haga las siguientes modificaciones:
 
 1. En el archivo index.html, incluido dentro de la subcarpeta **webapp** en la sección **main** del proyecto, deberá sustituir las NNNNNNNNNNNNN por su nombre completo y las XXXXXXXX por su matrícula, lo cual también deberá realizar en el archivo **datosmysql.properties** ubicado dentro de la subcarpeta **resources** en la sección **main**
 2. En el archivo build.gradle modifique el valor de version para que se use su matrícula
+
+3. Asegurese de estar usando la versión 8 de Java (en el menu File-> Project Structure, Sección Project, Opción Project SDK)
+4. Agregue una configuración de ejecución para poder poner a correr el Glassfish, para ello:
+   - Dé click en Add Configuration...
+   - D+e click en el +
+   - Seleccione GlassFish Server -> Local
+   - En el cuadro de diálogo que aparece seleccione domain1 en Server Domain, marque Preserve Sessions Across Redeployment, en la pestaña Deployment dé click en +, seleccione Artifact y seleccione RESTConcursos-XXXXXXXX.jar (donde las XXXXXXXX ya debieran aparecer como su matricula), de click en OK, regrese a la pestaña Server y seleccione Redeploy en On 'Update' Action, de click en OK
+
 
 ## CALIFICACIÓN
 
